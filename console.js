@@ -24,13 +24,25 @@ function addRandomEmoji(emojiList) {
     return emojiList;
 }
 
+// Function to remove a random emoji
+function removeRandomEmoji(emojiList) {
+    if (emojiList.length > 0) {
+        const randomIndex = Math.floor(Math.random() * emojiList.length);
+        console.log(`Removing emoji: ${emojiList[randomIndex]}`);
+        emojiList.splice(randomIndex, 1);
+    } else {
+        console.log('No emojis left to remove!');
+    }
+    return emojiList;
+}
+
 // Main program
 console.log('Welcome to the Random Emoji Console!');
 let currentEmojis = [...emojis];
 displayEmojis(currentEmojis);
 
 // Perform random actions
-const actions = [shuffleEmojis, addRandomEmoji];
+const actions = [shuffleEmojis, addRandomEmoji, removeRandomEmoji];
 setInterval(() => {
     const randomAction = actions[Math.floor(Math.random() * actions.length)];
     currentEmojis = randomAction(currentEmojis);
