@@ -1,7 +1,7 @@
 // console.js
 
 // List of emojis
-const emojis = ['😀', '😂', '🥳', '😎', '🤔', '😴', '🤖', '👻', '🐱', '🌟'];
+const emojis = ['😀', '😂', '🥳', '😎',  '🤖', '👻', '🐱', '🌟'];
 
 // Function to display emojis
 function displayEmojis(emojiList) {
@@ -31,13 +31,13 @@ function removeRandomEmoji(emojiList) {
         console.log(`Removing emoji: ${emojiList[randomIndex]}`);
         emojiList.splice(randomIndex, 1);
     } else {
-        console.log('No emojis left to remove!');
+        console.log('No emojis left');
     }
     return emojiList;
 }
 
 // Main program
-console.log('Welcome to the Random Emoji Console!');
+console.log('Welcome to the random emoji generator try it!! its actually fun');
 let currentEmojis = [...emojis];
 displayEmojis(currentEmojis);
 
